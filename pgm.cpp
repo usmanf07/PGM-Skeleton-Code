@@ -94,6 +94,7 @@ public:
 		* Here filtersize states the size of the matrix grid that will be created upon Image 2D Array i.e 3x3 by default
 		* Find median of this array.
 		* Then replace neighbouring pixels with the median value.
+		* The following image can help you understand the concept: https://i.stack.imgur.com/P6Moj.png
 		*/
 	}
 
@@ -145,7 +146,7 @@ public:
 private:
 	unsigned short Image[MaxRows][MaxCols]; //Use this 2D array to store pixels of Image
 	int Rows, Cols;	//Total Rows, Columns of image
-	char format[10];	//This is the magic number (The first row of pgm image), You can only hardcode this
+	char format[3];	//This is the magic number (The first row of pgm image)
 };
 
 int main()
@@ -154,9 +155,9 @@ int main()
 	string outputFile;
 	string image1;
 
-	//cout << "Enter name of image 1: " << endl;
-	//getline(cin, image1);
-	//GM.loadImage(image1);
+	cout << "Enter name of image 1: " << endl;
+	getline(cin, image1);
+	GM.loadImage(image1);
 
 
 	system("CLS");
